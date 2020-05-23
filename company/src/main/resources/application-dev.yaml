@@ -1,0 +1,13 @@
+dubbo:
+  application:
+    id: ilss-consumer
+    name: ilss-consumer
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    id: registry-1
+  protocol:
+    name: dubbo
+    port: 20889
+  consumer:
+    version: 1.0
