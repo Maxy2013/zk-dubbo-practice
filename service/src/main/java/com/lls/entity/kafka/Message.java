@@ -11,9 +11,15 @@ public class Message implements Serializable {
 
     private long id;
 
-    private String msg;
+    private Object msg;
 
     private Date sendTime;
+
+    public Message(long id, Object msg, Date sendTime) {
+        this.id = id;
+        this.msg = msg;
+        this.sendTime = sendTime;
+    }
 
     public long getId() {
         return id;
@@ -23,11 +29,11 @@ public class Message implements Serializable {
         this.id = id;
     }
 
-    public String getMsg() {
+    public Object getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public void setMsg(Object msg) {
         this.msg = msg;
     }
 

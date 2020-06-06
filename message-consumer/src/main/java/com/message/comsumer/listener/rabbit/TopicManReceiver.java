@@ -1,4 +1,4 @@
-package com.message.comsumer.listener;
+package com.message.comsumer.listener.rabbit;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -8,14 +8,14 @@ import java.util.Map;
 
 /**
  * @author liuzheng
- * @since 10:06 2020/5/16
+ * @since 11:24 2020/5/17
  */
 @Component
-@RabbitListener(queues = "testDirectQueue")
-public class DirectReceiverListener {
+@RabbitListener(queues = "topic.man")
+public class TopicManReceiver {
 
     @RabbitHandler
     public void process(Map message){
-        System.out.println("DirectReceiverListener接收到消息：" + message.toString());
+        System.out.println("Topic【Man】Receiver 接收到的消息" + message.toString());
     }
 }

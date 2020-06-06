@@ -1,4 +1,4 @@
-package com.message.comsumer.listener;
+package com.message.comsumer.listener.rabbit;
 
 import com.lls.common.CommonConstants;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -12,11 +12,11 @@ import java.util.Map;
  * @since 11:24 2020/5/17
  */
 @Component
-@RabbitListener(queues = CommonConstants.QUEUE_FANOUT_B)
-public class FanoutBReceiver {
+@RabbitListener(queues = CommonConstants.QUEUE_FANOUT_C)
+public class FanoutCReceiver {
 
     @RabbitHandler
     public void process(Map message){
-        System.out.println("Fanout.B 接收到的消息" + message.toString());
+        System.out.println("Fanout.C 接收到的消息" + message.toString());
     }
 }

@@ -7,4 +7,6 @@ package com.lls.service;
 public interface KafkaMsgService {
 
     void send();
+
+    void insertMessage(int i);
 }
